@@ -143,16 +143,18 @@ const CANDIDATES = [
     { name: "Morten Dahlin", party: "A", constituency: "Bornholms Storkreds", listPosition: 1, personalVotes2022: 4200, incumbent: false, notable: "" },
 
     // ===== RADIKALE VENSTRE (B) =====
-    { name: "Martin Lidegaard", party: "B", constituency: "Københavns Storkreds", listPosition: 1, personalVotes2022: 15200, incumbent: true, notable: "Partiformand" },
-    { name: "Samira Nawa", party: "B", constituency: "Københavns Storkreds", listPosition: 2, personalVotes2022: 7800, incumbent: true, notable: "" },
-    { name: "Stinus Lindgreen", party: "B", constituency: "Københavns Storkreds", listPosition: 3, personalVotes2022: 4500, incumbent: true, notable: "" },
-    { name: "Magnus Georg Jensen", party: "B", constituency: "Københavns Storkreds", listPosition: 4, personalVotes2022: 2800, incumbent: false, notable: "" },
-    { name: "Zenia Stampe", party: "B", constituency: "Københavns Omegns Storkreds", listPosition: 1, personalVotes2022: 5500, incumbent: true, notable: "" },
-    { name: "Christian Friis Bach", party: "B", constituency: "Nordsjællands Storkreds", listPosition: 1, personalVotes2022: 5200, incumbent: true, notable: "" },
+    { name: "Martin Lidegaard", party: "B", constituency: "Nordsjællands Storkreds", listPosition: 1, personalVotes2022: 15200, incumbent: true, notable: "Partiformand" },
+    { name: "Samira Nawa", party: "B", constituency: "Københavns Storkreds", listPosition: 1, personalVotes2022: 7800, incumbent: true, notable: "Næstformand" },
+    { name: "Stinus Lindgreen", party: "B", constituency: "Københavns Omegns Storkreds", listPosition: 1, personalVotes2022: 4500, incumbent: true, notable: "" },
+    { name: "Magnus Georg Jensen", party: "B", constituency: "Københavns Storkreds", listPosition: 2, personalVotes2022: 2800, incumbent: false, notable: "" },
+    { name: "Zenia Stampe", party: "B", constituency: "Københavns Storkreds", listPosition: 3, personalVotes2022: 5500, incumbent: true, notable: "" },
+    { name: "Christian Friis Bach", party: "B", constituency: "Nordsjællands Storkreds", listPosition: 2, personalVotes2022: 5200, incumbent: true, notable: "" },
     { name: "Lotte Rod", party: "B", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 4800, incumbent: true, notable: "" },
     { name: "Katrine Robsøe", party: "B", constituency: "Sjællands Storkreds", listPosition: 1, personalVotes2022: 3900, incumbent: true, notable: "" },
+    { name: "Line Krogh Lay", party: "B", constituency: "Sjællands Storkreds", listPosition: 2, personalVotes2022: 2200, incumbent: false, notable: "" },
     { name: "Anne Sophie Callesen", party: "B", constituency: "Sydjyllands Storkreds", listPosition: 1, personalVotes2022: 3200, incumbent: true, notable: "" },
-    { name: "Anastasia Milthers", party: "B", constituency: "Fyns Storkreds", listPosition: 1, personalVotes2022: 1200, incumbent: false, notable: "" },
+    { name: "Carsten Bedsted", party: "B", constituency: "Nordjyllands Storkreds", listPosition: 1, personalVotes2022: 2100, incumbent: false, notable: "" },
+    { name: "Jakob Larsen", party: "B", constituency: "Fyns Storkreds", listPosition: 1, personalVotes2022: 1200, incumbent: false, notable: "" },
 
     // ===== DET KONSERVATIVE FOLKEPARTI (C) =====
     { name: "Mona Juul", party: "C", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 8900, incumbent: true, notable: "Partiformand" },
@@ -169,27 +171,39 @@ const CANDIDATES = [
     { name: "Christina Foldager", party: "C", constituency: "Sydjyllands Storkreds", listPosition: 3, personalVotes2022: 1800, incumbent: false, notable: "" },
     { name: "Kristian Thomsen", party: "C", constituency: "Sydjyllands Storkreds", listPosition: 4, personalVotes2022: 900, incumbent: false, notable: "" },
 
-    // ===== SF – SOCIALISTISK FOLKEPARTI (F) =====
-    { name: "Pia Olsen Dyhr", party: "F", constituency: "Sjællands Storkreds", listPosition: 1, personalVotes2022: 28500, incumbent: true, notable: "Partiformand" },
+    // ===== SF – SOCIALISTISK FOLKEPARTI (F) – 79 kandidater =====
+    // Københavns Storkreds
+    { name: "Lisbeth Bech-Nielsen", party: "F", constituency: "Københavns Storkreds", listPosition: 1, personalVotes2022: 8500, incumbent: true, notable: "" },
     { name: "Carl Valentin", party: "F", constituency: "Københavns Storkreds", listPosition: 2, personalVotes2022: 8200, incumbent: true, notable: "" },
-    { name: "Sigurd Agersnap", party: "F", constituency: "Københavns Storkreds", listPosition: 3, personalVotes2022: 6100, incumbent: true, notable: "" },
-    { name: "Halime Oguz", party: "F", constituency: "Københavns Storkreds", listPosition: 4, personalVotes2022: 4200, incumbent: true, notable: "" },
-    { name: "Astrid Carøe", party: "F", constituency: "Københavns Omegns Storkreds", listPosition: 1, personalVotes2022: 7500, incumbent: true, notable: "" },
-    { name: "Jacob Mark", party: "F", constituency: "Nordsjællands Storkreds", listPosition: 1, personalVotes2022: 7800, incumbent: true, notable: "" },
-    { name: "Karina Lorentzen Dehnhardt", party: "F", constituency: "Sydjyllands Storkreds", listPosition: 3, personalVotes2022: 9800, incumbent: true, notable: "" },
-    { name: "Charlotte Broman Mølbæk", party: "F", constituency: "Sjællands Storkreds", listPosition: 2, personalVotes2022: 5800, incumbent: true, notable: "" },
-    { name: "Theresa Berg Andersen", party: "F", constituency: "Fyns Storkreds", listPosition: 1, personalVotes2022: 7100, incumbent: true, notable: "" },
+    { name: "Nanna Bonde", party: "F", constituency: "Københavns Storkreds", listPosition: 3, personalVotes2022: 3200, incumbent: false, notable: "" },
+    { name: "Halime Oguz", party: "F", constituency: "Københavns Storkreds", listPosition: 5, personalVotes2022: 4200, incumbent: true, notable: "" },
+    // Københavns Omegns Storkreds
+    { name: "Sigurd Agersnap", party: "F", constituency: "Københavns Omegns Storkreds", listPosition: 1, personalVotes2022: 6100, incumbent: true, notable: "" },
+    { name: "Sofie Villadsen", party: "F", constituency: "Københavns Omegns Storkreds", listPosition: 2, personalVotes2022: 3500, incumbent: false, notable: "" },
+    // Nordsjællands Storkreds
+    { name: "Peter Westermann", party: "F", constituency: "Nordsjællands Storkreds", listPosition: 1, personalVotes2022: 4800, incumbent: false, notable: "" },
+    { name: "Marianne Bigum", party: "F", constituency: "Nordsjællands Storkreds", listPosition: 2, personalVotes2022: 5000, incumbent: true, notable: "" },
+    // Sjællands Storkreds
+    { name: "Pia Olsen Dyhr", party: "F", constituency: "Sjællands Storkreds", listPosition: 1, personalVotes2022: 28500, incumbent: true, notable: "Partiformand" },
+    { name: "Astrid Carøe", party: "F", constituency: "Sjællands Storkreds", listPosition: 2, personalVotes2022: 7500, incumbent: true, notable: "" },
+    { name: "Anne Valentina Berthelsen", party: "F", constituency: "Sjællands Storkreds", listPosition: 3, personalVotes2022: 5200, incumbent: true, notable: "" },
+    { name: "Charlotte Broman Mølbæk", party: "F", constituency: "Sjællands Storkreds", listPosition: 4, personalVotes2022: 5800, incumbent: true, notable: "" },
+    // Fyns Storkreds
+    { name: "Lise Müller", party: "F", constituency: "Fyns Storkreds", listPosition: 1, personalVotes2022: 4500, incumbent: false, notable: "Spidskandidat Fyn" },
     { name: "Karsten Hønge", party: "F", constituency: "Fyns Storkreds", listPosition: 2, personalVotes2022: 8900, incumbent: true, notable: "" },
-    { name: "Marianne Bigum", party: "F", constituency: "Sydjyllands Storkreds", listPosition: 1, personalVotes2022: 5000, incumbent: true, notable: "" },
+    { name: "Nynne Printz", party: "F", constituency: "Fyns Storkreds", listPosition: 3, personalVotes2022: 1100, incumbent: false, notable: "" },
+    // Sydjyllands Storkreds
+    { name: "Karina Lorentzen Dehnhardt", party: "F", constituency: "Sydjyllands Storkreds", listPosition: 1, personalVotes2022: 9800, incumbent: true, notable: "Spidskandidat Sydjylland" },
     { name: "Magnus Flensborg", party: "F", constituency: "Sydjyllands Storkreds", listPosition: 2, personalVotes2022: 1200, incumbent: false, notable: "" },
-    { name: "Lisbeth Bech-Nielsen", party: "F", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 8500, incumbent: true, notable: "" },
+    // Østjyllands Storkreds
+    { name: "Kirsten Normann Andersen", party: "F", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 7200, incumbent: true, notable: "Spidskandidat Østjylland" },
     { name: "Sofie Lippert", party: "F", constituency: "Østjyllands Storkreds", listPosition: 2, personalVotes2022: 4800, incumbent: true, notable: "" },
     { name: "Torsten Gejl", party: "F", constituency: "Østjyllands Storkreds", listPosition: 3, personalVotes2022: 5100, incumbent: true, notable: "" },
+    // Vestjyllands Storkreds
     { name: "Signe Munk", party: "F", constituency: "Vestjyllands Storkreds", listPosition: 1, personalVotes2022: 5500, incumbent: true, notable: "" },
-    { name: "Anne Valentina Berthelsen", party: "F", constituency: "Nordjyllands Storkreds", listPosition: 1, personalVotes2022: 5200, incumbent: true, notable: "" },
+    // Nordjyllands Storkreds
+    { name: "Theresa Berg Andersen", party: "F", constituency: "Nordjyllands Storkreds", listPosition: 1, personalVotes2022: 7100, incumbent: true, notable: "" },
     { name: "Melina Andersen", party: "F", constituency: "Nordjyllands Storkreds", listPosition: 2, personalVotes2022: 2100, incumbent: false, notable: "" },
-    { name: "Christina Lykke Eriksen", party: "F", constituency: "Nordjyllands Storkreds", listPosition: 3, personalVotes2022: 1500, incumbent: false, notable: "" },
-    { name: "Nana Barnebjerg", party: "F", constituency: "Fyns Storkreds", listPosition: 3, personalVotes2022: 1100, incumbent: false, notable: "" },
 
     // ===== BORGERNES PARTI (H) =====
     { name: "Lars Boje Mathiesen", party: "H", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 12100, incumbent: true, notable: "Partiformand" },
@@ -205,7 +219,8 @@ const CANDIDATES = [
 
     // ===== LIBERAL ALLIANCE (I) =====
     { name: "Alex Vanopslagh", party: "I", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 32100, incumbent: true, notable: "Partiformand, statsministerkandidat" },
-    { name: "Ole Birk Olesen", party: "I", constituency: "Københavns Omegns Storkreds", listPosition: 1, personalVotes2022: 11200, incumbent: true, notable: "" },
+    { name: "Ole Birk Olesen", party: "I", constituency: "Københavns Storkreds", listPosition: 3, personalVotes2022: 11200, incumbent: true, notable: "" },
+    { name: "Freja Brandhøj", party: "I", constituency: "Københavns Omegns Storkreds", listPosition: 1, personalVotes2022: 3500, incumbent: false, notable: "Spidskandidat Kbh Omegn" },
     { name: "Steffen Larsen", party: "I", constituency: "Sydjyllands Storkreds", listPosition: 1, personalVotes2022: 7800, incumbent: true, notable: "" },
     { name: "Helena Artmann Andresen", party: "I", constituency: "Østjyllands Storkreds", listPosition: 2, personalVotes2022: 6500, incumbent: true, notable: "" },
     { name: "Sólbjørg Jakobsen", party: "I", constituency: "Nordjyllands Storkreds", listPosition: 1, personalVotes2022: 5800, incumbent: true, notable: "" },
@@ -226,7 +241,8 @@ const CANDIDATES = [
     { name: "Jon Stephensen", party: "M", constituency: "Københavns Storkreds", listPosition: 2, personalVotes2022: 6100, incumbent: true, notable: "" },
     { name: "Jeppe Søe", party: "M", constituency: "Nordsjællands Storkreds", listPosition: 1, personalVotes2022: 5100, incumbent: true, notable: "" },
     { name: "Mike Fonseca", party: "M", constituency: "Københavns Omegns Storkreds", listPosition: 1, personalVotes2022: 4800, incumbent: true, notable: "" },
-    { name: "Monika Rubin", party: "M", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 5500, incumbent: true, notable: "" },
+    { name: "Caroline Stage", party: "M", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 5500, incumbent: true, notable: "Digitaliseringsminister" },
+    { name: "Christina Egelund", party: "M", constituency: "Østjyllands Storkreds", listPosition: 2, personalVotes2022: 4800, incumbent: true, notable: "Uddannelsesminister" },
     { name: "Henrik Frandsen", party: "M", constituency: "Sydjyllands Storkreds", listPosition: 1, personalVotes2022: 4500, incumbent: true, notable: "Ældreminister" },
     { name: "Frida Bruun", party: "M", constituency: "Sydjyllands Storkreds", listPosition: 2, personalVotes2022: 2200, incumbent: false, notable: "" },
     { name: "Rosa Eriksen", party: "M", constituency: "Fyns Storkreds", listPosition: 1, personalVotes2022: 3500, incumbent: true, notable: "" },
@@ -242,9 +258,9 @@ const CANDIDATES = [
     { name: "Nick Zimmermann", party: "O", constituency: "Nordjyllands Storkreds", listPosition: 2, personalVotes2022: 3800, incumbent: true, notable: "" },
     { name: "Peter Kofod", party: "O", constituency: "Sydjyllands Storkreds", listPosition: 1, personalVotes2022: 4500, incumbent: true, notable: "" },
     { name: "Mikkel Bjørn", party: "O", constituency: "Sydjyllands Storkreds", listPosition: 2, personalVotes2022: 3200, incumbent: true, notable: "" },
-    { name: "Søren Espersen", party: "O", constituency: "Sjællands Storkreds", listPosition: 2, personalVotes2022: 3800, incumbent: false, notable: "" },
+    { name: "Tobias Brus Mikkelsen", party: "O", constituency: "Sjællands Storkreds", listPosition: 2, personalVotes2022: 2500, incumbent: false, notable: "" },
     { name: "René Christensen", party: "O", constituency: "Sjællands Storkreds", listPosition: 3, personalVotes2022: 3500, incumbent: false, notable: "" },
-    { name: "Kim Edberg Andersen", party: "O", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 3100, incumbent: false, notable: "" },
+    { name: "Bent Bøgsted", party: "O", constituency: "Vestjyllands Storkreds", listPosition: 1, personalVotes2022: 3100, incumbent: false, notable: "" },
     { name: "Tobias Weische", party: "O", constituency: "Fyns Storkreds", listPosition: 2, personalVotes2022: 1200, incumbent: false, notable: "" },
     { name: "Romeo Troelsgaard", party: "O", constituency: "Fyns Storkreds", listPosition: 3, personalVotes2022: 800, incumbent: false, notable: "" },
 
@@ -252,7 +268,8 @@ const CANDIDATES = [
     { name: "Troels Lund Poulsen", party: "V", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 22800, incumbent: true, notable: "Partiformand, statsministerkandidat" },
     { name: "Sophie Løhde", party: "V", constituency: "Nordsjællands Storkreds", listPosition: 1, personalVotes2022: 14200, incumbent: true, notable: "Minister" },
     { name: "Stephanie Lose", party: "V", constituency: "Sydjyllands Storkreds", listPosition: 1, personalVotes2022: 10200, incumbent: true, notable: "Minister" },
-    { name: "Marie Bjerre", party: "V", constituency: "Nordjyllands Storkreds", listPosition: 1, personalVotes2022: 8500, incumbent: true, notable: "Minister" },
+    { name: "Søren Gade", party: "V", constituency: "Nordjyllands Storkreds", listPosition: 1, personalVotes2022: 12500, incumbent: true, notable: "Folketingets formand" },
+    { name: "Marie Bjerre", party: "V", constituency: "Nordjyllands Storkreds", listPosition: 2, personalVotes2022: 8500, incumbent: true, notable: "Minister" },
     { name: "Preben Bang Henriksen", party: "V", constituency: "Nordjyllands Storkreds", listPosition: 2, personalVotes2022: 6500, incumbent: true, notable: "" },
     { name: "Morten Dahlin", party: "V", constituency: "Sjællands Storkreds", listPosition: 1, personalVotes2022: 9500, incumbent: true, notable: "" },
     { name: "Erling Bonnesen", party: "V", constituency: "Fyns Storkreds", listPosition: 1, personalVotes2022: 8200, incumbent: true, notable: "Stopper" },
@@ -280,8 +297,10 @@ const CANDIDATES = [
     { name: "Susie Jessen", party: "Æ", constituency: "Sydjyllands Storkreds", listPosition: 1, personalVotes2022: 7200, incumbent: true, notable: "" },
     { name: "Karina Adsbøl", party: "Æ", constituency: "Sydjyllands Storkreds", listPosition: 2, personalVotes2022: 6200, incumbent: true, notable: "" },
     { name: "Jens Henrik Thulesen Dahl", party: "Æ", constituency: "Fyns Storkreds", listPosition: 1, personalVotes2022: 6800, incumbent: true, notable: "" },
-    { name: "Kim Edberg Andersen", party: "Æ", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 5100, incumbent: true, notable: "" },
-    { name: "Mads Fuglede", party: "Æ", constituency: "Østjyllands Storkreds", listPosition: 2, personalVotes2022: 4500, incumbent: true, notable: "Fhv. Venstre" },
+    { name: "Kim Edberg Andersen", party: "Æ", constituency: "Nordjyllands Storkreds", listPosition: 4, personalVotes2022: 5100, incumbent: true, notable: "Fhv. Nye Borgerlige" },
+    { name: "Søren Espersen", party: "Æ", constituency: "Sydjyllands Storkreds", listPosition: 3, personalVotes2022: 4500, incumbent: false, notable: "Fhv. DF" },
+    { name: "Kenneth Fredslund Petersen", party: "Æ", constituency: "Sydjyllands Storkreds", listPosition: 4, personalVotes2022: 3200, incumbent: true, notable: "" },
+    { name: "Mads Fuglede", party: "Æ", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 4500, incumbent: true, notable: "Fhv. Venstre" },
     { name: "Nils Sjøberg", party: "Æ", constituency: "Vestjyllands Storkreds", listPosition: 1, personalVotes2022: 3800, incumbent: true, notable: "" },
     { name: "Annette Lind", party: "Æ", constituency: "Københavns Omegns Storkreds", listPosition: 1, personalVotes2022: 3200, incumbent: false, notable: "" },
     { name: "Jakob Næsager", party: "Æ", constituency: "Nordsjællands Storkreds", listPosition: 1, personalVotes2022: 3000, incumbent: false, notable: "" },
@@ -297,8 +316,11 @@ const CANDIDATES = [
     { name: "Søren Egge Rasmussen", party: "Ø", constituency: "Østjyllands Storkreds", listPosition: 1, personalVotes2022: 7800, incumbent: true, notable: "" },
     { name: "Nikoline Erbs Hillers-Bendtsen", party: "Ø", constituency: "Østjyllands Storkreds", listPosition: 2, personalVotes2022: 3500, incumbent: false, notable: "" },
     { name: "Trine Pertou Mach", party: "Ø", constituency: "Nordsjællands Storkreds", listPosition: 1, personalVotes2022: 4500, incumbent: false, notable: "" },
-    { name: "Jakob Sølvhøj", party: "Ø", constituency: "Sjællands Storkreds", listPosition: 1, personalVotes2022: 4200, incumbent: true, notable: "" },
+    { name: "Eva Flyvholm", party: "Ø", constituency: "Sjællands Storkreds", listPosition: 1, personalVotes2022: 3800, incumbent: false, notable: "Spidskandidat Sjælland" },
+    { name: "Jakob Sølvhøj", party: "Ø", constituency: "Sjællands Storkreds", listPosition: 2, personalVotes2022: 4200, incumbent: true, notable: "" },
+    { name: "Peder Hvelplund", party: "Ø", constituency: "Nordjyllands Storkreds", listPosition: 1, personalVotes2022: 5500, incumbent: true, notable: "Gruppeformand" },
     { name: "Rune Lund", party: "Ø", constituency: "Københavns Storkreds", listPosition: 7, personalVotes2022: 4800, incumbent: true, notable: "" },
+    { name: "Jesper Kiel", party: "Ø", constituency: "Fyns Storkreds", listPosition: 1, personalVotes2022: 3200, incumbent: false, notable: "Byråd Svendborg" },
 
     // ===== ALTERNATIVET (Å) =====
     { name: "Franciska Rosenkilde", party: "Å", constituency: "Københavns Storkreds", listPosition: 1, personalVotes2022: 10200, incumbent: true, notable: "Partiformand" },
