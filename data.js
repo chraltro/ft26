@@ -59,15 +59,15 @@ const LATEST_POLLS = POLLING_HISTORY[POLLING_HISTORY.length - 1];
 // 10 storkredse with kredsmandater (based on 2025 recalculation)
 const CONSTITUENCIES = {
     "Københavns Storkreds":        { seats: 17, id: "kbh",     region: "Hovedstaden" },
-    "Københavns Omegns Storkreds": { seats: 14, id: "kbh-omegn", region: "Hovedstaden" },
-    "Nordsjællands Storkreds":     { seats: 12, id: "nordsj",  region: "Hovedstaden" },
+    "Københavns Omegns Storkreds": { seats: 11, id: "kbh-omegn", region: "Hovedstaden" },
+    "Nordsjællands Storkreds":     { seats: 10, id: "nordsj",  region: "Hovedstaden" },
     "Bornholms Storkreds":         { seats: 2,  id: "born",    region: "Hovedstaden" },
     "Sjællands Storkreds":         { seats: 20, id: "sj",      region: "Sjælland" },
-    "Fyns Storkreds":              { seats: 13, id: "fyn",     region: "Syddanmark" },
-    "Sydjyllands Storkreds":       { seats: 18, id: "sydjyl",  region: "Syddanmark" },
+    "Fyns Storkreds":              { seats: 12, id: "fyn",     region: "Syddanmark" },
+    "Sydjyllands Storkreds":       { seats: 17, id: "sydjyl",  region: "Syddanmark" },
     "Østjyllands Storkreds":       { seats: 19, id: "ostjyl",  region: "Midtjylland" },
-    "Vestjyllands Storkreds":      { seats: 10, id: "vestjyl", region: "Midtjylland" },
-    "Nordjyllands Storkreds":      { seats: 10, id: "nordjyl", region: "Nordjylland" },
+    "Vestjyllands Storkreds":      { seats: 13, id: "vestjyl", region: "Midtjylland" },
+    "Nordjyllands Storkreds":      { seats: 14, id: "nordjyl", region: "Nordjylland" },
 };
 
 // Regional party strength modifiers (relative to national average)
