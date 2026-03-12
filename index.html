@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folketingsvalg 2026 – Valgprognose</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇩🇰</text></svg>">
+</head>
+<body>
+    <div id="app">
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">Prognose</div>
+                    <h1>Folketingsvalg <span class="accent">2026</span></h1>
+                    <p class="hero-subtitle">Hvem bliver valgt ind den 24. marts? Udforsk vores kandidatprognose baseret på meningsmålinger, valgresultater og kandidatrangering.</p>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" id="total-candidates">0</span>
+                            <span class="stat-label">Kandidater</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">175</span>
+                            <span class="stat-label">Mandater</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" id="total-parties">0</span>
+                            <span class="stat-label">Partier</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation tabs -->
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-view="overview">Overblik</button>
+                    <button class="nav-tab" data-view="parties">Partier</button>
+                    <button class="nav-tab" data-view="candidates">Kandidater</button>
+                    <button class="nav-tab" data-view="constituencies">Storkredse</button>
+                    <button class="nav-tab" data-view="method">Metode</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Filters bar -->
+        <section class="filters-bar" id="filters-bar">
+            <div class="container">
+                <div class="filters-row">
+                    <div class="filter-group">
+                        <label>Parti</label>
+                        <select id="filter-party">
+                            <option value="">Alle partier</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Storkreds</label>
+                        <select id="filter-constituency">
+                            <option value="">Alle storkredse</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select id="filter-status">
+                            <option value="">Alle</option>
+                            <option value="safe">Sikker plads</option>
+                            <option value="likely">Sandsynlig</option>
+                            <option value="tossup">Usikker</option>
+                            <option value="unlikely">Usandsynlig</option>
+                        </select>
+                    </div>
+                    <div class="filter-group search-group">
+                        <label>Søg</label>
+                        <input type="text" id="filter-search" placeholder="Søg efter kandidat...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main content area -->
+        <main class="main-content">
+            <div class="container">
+                <!-- Overview view -->
+                <div id="view-overview" class="view active">
+                    <div class="section-header">
+                        <h2>Mandatfordeling</h2>
+                        <p>Forventet mandatfordeling baseret på seneste meningsmålinger</p>
+                    </div>
+                    <div class="seat-visualization" id="seat-chart"></div>
+                    <div class="party-bars" id="party-bars"></div>
+
+                    <div class="section-header" style="margin-top:3rem">
+                        <h2>Blokfordeling</h2>
+                    </div>
+                    <div class="bloc-container" id="bloc-container"></div>
+
+                    <div class="section-header" style="margin-top:3rem">
+                        <h2>Top kandidater med størst sandsynlighed</h2>
+                    </div>
+                    <div class="top-candidates-grid" id="top-candidates"></div>
+                </div>
+
+                <!-- Parties view -->
+                <div id="view-parties" class="view">
+                    <div class="section-header">
+                        <h2>Partioversigt</h2>
+                        <p>Sammenlign partiernes forventede mandattal med 2022-resultatet</p>
+                    </div>
+                    <div class="parties-grid" id="parties-grid"></div>
+                </div>
+
+                <!-- Candidates view -->
+                <div id="view-candidates" class="view">
+                    <div class="section-header">
+                        <h2>Alle kandidater</h2>
+                        <p>Sorteret efter sandsynlighed for at blive valgt ind</p>
+                    </div>
+                    <div class="candidates-table-wrapper">
+                        <table class="candidates-table" id="candidates-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable" data-sort="rank">#</th>
+                                    <th class="sortable" data-sort="name">Kandidat</th>
+                                    <th class="sortable" data-sort="party">Parti</th>
+                                    <th class="sortable" data-sort="constituency">Storkreds</th>
+                                    <th class="sortable active-sort" data-sort="probability">Sandsynlighed</th>
+                                    <th class="sortable" data-sort="status">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="candidates-tbody"></tbody>
+                        </table>
+                    </div>
+                    <div class="pagination" id="pagination"></div>
+                </div>
+
+                <!-- Constituencies view -->
+                <div id="view-constituencies" class="view">
+                    <div class="section-header">
+                        <h2>Storkredse</h2>
+                        <p>Se mandatfordelingen i hver storkreds</p>
+                    </div>
+                    <div class="constituencies-grid" id="constituencies-grid"></div>
+                </div>
+
+                <!-- Method view -->
+                <div id="view-method" class="view">
+                    <div class="section-header">
+                        <h2>Metode</h2>
+                    </div>
+                    <div class="method-content">
+                        <div class="method-card">
+                            <h3>Datagrundlag</h3>
+                            <p>Prognosen er baseret på en kombination af:</p>
+                            <ul>
+                                <li><strong>Meningsmålinger</strong> – Seneste nationale meningsmålinger fra marts 2026, vægtet efter aktualitet og institut.</li>
+                                <li><strong>Valgresultat 2022</strong> – Resultatet fra folketingsvalget 1. november 2022 bruges som baseline.</li>
+                                <li><strong>Kandidatrangering</strong> – Kandidaternes placering på partilisten i deres storkreds.</li>
+                                <li><strong>Personlige stemmer</strong> – Historiske personlige stemmetal fra 2022 bruges til at vurdere individuel popularitet.</li>
+                            </ul>
+                        </div>
+                        <div class="method-card">
+                            <h3>Beregningsmodel</h3>
+                            <p>Modellen beregner sandsynlighed i flere trin:</p>
+                            <ol>
+                                <li><strong>Mandatfordeling</strong> – D'Hondts metode bruges til at fordele mandater til partier baseret på meningsmålinger.</li>
+                                <li><strong>Kredsfordeling</strong> – Mandaterne fordeles på storkredse proportionalt med partiets historiske styrke i kredsen.</li>
+                                <li><strong>Kandidatrangering</strong> – Inden for hver kreds rangeres kandidater efter listeplacering og estimerede personlige stemmer.</li>
+                                <li><strong>Sandsynlighed</strong> – En Monte Carlo-lignende simulation med variation i meningsmålingerne giver en sandsynlighed for hver kandidat.</li>
+                            </ol>
+                        </div>
+                        <div class="method-card">
+                            <h3>Usikkerhed</h3>
+                            <p>Al valgprognose er forbundet med usikkerhed. Meningsmålinger har en typisk fejlmargin på ±1-3 procentpoint.
+                            Personlige stemmer er svære at forudsige, og lokale forhold kan have stor betydning.</p>
+                            <p>Denne prognose skal ses som et estimat – ikke en garanti. Den opdateres løbende med nye meningsmålinger.</p>
+                        </div>
+                        <div class="method-card">
+                            <h3>Forbehold</h3>
+                            <p>Denne side er et hobbyprojekt og har intet tilhørsforhold til noget politisk parti.
+                            Prognosen er udelukkende baseret på offentligt tilgængelige data og matematiske modeller.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Candidate detail modal -->
+                <div class="modal-overlay" id="candidate-modal">
+                    <div class="modal">
+                        <button class="modal-close" id="modal-close">&times;</button>
+                        <div class="modal-content" id="modal-content"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>Folketingsvalg 2026 Prognose &middot; Baseret på meningsmålinger og valgdata &middot; Sidst opdateret marts 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="model.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
